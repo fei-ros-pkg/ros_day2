@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+  <name>ros_day2</name>
+  <version>0.0.1</version>
+  <description>The ros_day2 metapackage</description>
+  <maintainer email="muhrix@gmail.com">Murilo F. M.</maintainer>
+  <license>BSD</license>
+  <author email="muhrix@gmail.com">Murilo F. M.</author>
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>day2_talker</run_depend>
+  <run_depend>day2_listener</run_depend>
+  <run_depend>day2_service</run_depend>
+  <run_depend>day2_client</run_depend>
+  <export>
+    <metapackage/>
+  </export>
+</package>
+
