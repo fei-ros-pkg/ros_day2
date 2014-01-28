@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(day2_service)
-
 find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs message_generation)
+
+catkin_python_setup()
 
 add_service_files(
   FILES
@@ -24,5 +25,10 @@ install(TARGETS service_node
 install(DIRECTORY include/${PROJECT_NAME}/
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
   FILES_MATCHING PATTERN "*.h"
+)
+
+install(PROGRAMS
+  scripts/service_node.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
