@@ -9,7 +9,7 @@ catkin_package(CATKIN_DEPENDS roscpp rospy std_msgs day2_service)
 include_directories(${catkin_INCLUDE_DIRS})
 
 add_executable(client_node src/client_node.cpp)
-
+add_dependencies(client_node day2_service_generate_messages_cpp)
 target_link_libraries(client_node ${catkin_LIBRARIES})
 
 install(TARGETS client_node
